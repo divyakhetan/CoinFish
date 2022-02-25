@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/coinfish/static/css/main.76c3a6b1.css",
+    "main.js": "/coinfish/static/js/main.99cf278c.js",
+    "static/js/787.cc73118d.chunk.js": "/coinfish/static/js/787.cc73118d.chunk.js",
+    "index.html": "/coinfish/index.html",
+    "main.76c3a6b1.css.map": "/coinfish/static/css/main.76c3a6b1.css.map",
+    "main.99cf278c.js.map": "/coinfish/static/js/main.99cf278c.js.map",
+    "787.cc73118d.chunk.js.map": "/coinfish/static/js/787.cc73118d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.76c3a6b1.css",
+    "static/js/main.99cf278c.js"
+  ]
+}
