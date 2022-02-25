@@ -14,26 +14,38 @@ const Home = () => {
     parseInt(useParams().pageNumber)
   );
 
-  useEffect(async () => {
-    if (isNaN(currentPage)) {
-      setCurrentPage(1);
+  useEffect(() => {
+    async function getData() {
+      if (isNaN(currentPage)) {
+        setCurrentPage(1);
+      }
+      setLoading(true);
+      let params = {
+        per_page: 10,
+        page: currentPage,
+      };
+      const res = await axios.get(
+        "https://api.coingecko.com/api/v3/exchanges",
+        {
+          params: params,
+        }
+      );
+      setExchanges(res.data);
+      setLoading(false);
     }
-    setLoading(true);
-    let params = {
-      per_page: 10,
-      page: currentPage,
-    };
-    const res = await axios.get("https://api.coingecko.com/api/v3/exchanges", {
-      params: params,
-    });
-    setExchanges(res.data);
-    setLoading(false);
+
+    getData();
   }, [currentPage]);
 
   return (
-    <>
-      <h3>Exchanges data</h3>
-      <Exchanges exchanges={exchanges} loading={loading} />
+    <div className="container-xl">
+      <div className="d-flex justify-content-center">
+        <h3>Exchanges data</h3>
+      </div>
+
+      <div className="d-flex justify-content-center">
+        <Exchanges exchanges={exchanges} loading={loading} />
+      </div>
       <Pagination
         currentPage={currentPage}
         onLeftClick={() => {
@@ -49,7 +61,7 @@ const Home = () => {
           navigate(`/${page}`);
         }}
       />
-    </>
+    </div>
   );
 };
 export default Home;

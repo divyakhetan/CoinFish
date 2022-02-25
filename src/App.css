@@ -39,7 +39,6 @@
 
 .centre {
   text-align: center;
-  height: 10;
 }
 
 .img {
@@ -47,12 +46,11 @@
   width: 30px;
 }
 
-.tableStyle {
-  margin-left: 10%;
-  width: 80%;
+/* html,
+body {
+  height: 100%;
+  min-width: 360px;
 }
-
-h3 {
-  text-align: center;
-  margin: 1%;
-}
+body {
+  margin: 0;
+} */

@@ -1,6 +1,7 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 import Row from "./Row";
+
 const Exchanges = ({ exchanges, loading }) => {
   if (loading) {
     return (
@@ -14,7 +15,14 @@ const Exchanges = ({ exchanges, loading }) => {
     );
   }
   return (
-    <Table striped bordered hover variant="dark" className="centre tableStyle">
+    <Table
+      responsive
+      striped
+      bordered
+      hover
+      variant="dark"
+      className="centre tableStyle"
+    >
       <tbody>
         <tr>
           <th>Logo</th>

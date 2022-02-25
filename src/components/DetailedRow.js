@@ -10,76 +10,85 @@ const DetailedRow = () => {
   const [id, setId] = useState(useParams().id);
   const [data, setData] = useState({});
 
-  useEffect(async () => {
-    const res = await axios.get(
-      `https://api.coingecko.com/api/v3/exchanges/${id}`
-    );
-    console.log(res.data);
-    setData(res.data);
+  useEffect(() => {
+    async function getData() {
+      const res = await axios.get(
+        `https://api.coingecko.com/api/v3/exchanges/${id}`
+      );
+      console.log(res.data);
+      setData(res.data);
+    }
+
+    getData();
   }, []);
+
   return (
     <>
-      <Button
-        onClick={() => navigate(-1)}
-        variant="danger"
-        style={{ margin: 20 }}
-      >
-        Go Back
-      </Button>
+      <div className="container-xl">
+        <Button
+          onClick={() => navigate(-1)}
+          variant="danger"
+          style={{ margin: 20 }}
+        >
+          Go Back
+        </Button>
+        <div className="d-flex justify-content-center">
+          <Table
+            responsive
+            striped
+            bordered
+            hover
+            variant="dark"
+            className="centre  tableStyle"
+          >
+            <tbody>
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+              </tr>
+              <tr>
+                <td>Logo</td>
+                <td>
+                  <Image src={data.image} rounded></Image>
+                </td>
+              </tr>
+              <tr>
+                <td>Name</td>
+                <td>{data.name}</td>
+              </tr>
+              <tr>
+                <td>Country</td>
+                <td>{data.country}</td>
+              </tr>
+              <tr>
+                <td>Trust Rank</td>
+                <td>{data.trust_score_rank}</td>
+              </tr>
 
-      <Table
-        striped
-        bordered
-        hover
-        variant="dark"
-        className="centre  tableStyle"
-      >
-        <tbody>
-          <tr>
-            <th>Field</th>
-            <th>Value</th>
-          </tr>
-          <tr>
-            <td>Logo</td>
-            <td>
-              <Image src={data.image} rounded></Image>
-            </td>
-          </tr>
-          <tr>
-            <td>Name</td>
-            <td>{data.name}</td>
-          </tr>
-          <tr>
-            <td>Country</td>
-            <td>{data.country}</td>
-          </tr>
-          <tr>
-            <td>Trust Rank</td>
-            <td>{data.trust_score_rank}</td>
-          </tr>
-
-          <tr>
-            <td>Year of establishment</td>
-            <td>{data.year_established}</td>
-          </tr>
-          <tr>
-            <td>Description</td>
-            <td>{data.description}</td>
-          </tr>
-          <tr>
-            <td>Facebook url</td>
-            <td>{data.facebook_url}</td>
-          </tr>
-          <tr>
-            <td>Reddit url</td>
-            <td>{data.reddit_url}</td>
-          </tr>
-          <tr>
-            <td>Telegram url</td>
-            <td>{data.telegram_url}</td>
-          </tr>
-        </tbody>
-      </Table>
+              <tr>
+                <td>Year of establishment</td>
+                <td>{data.year_established}</td>
+              </tr>
+              <tr>
+                <td>Description</td>
+                <td>{data.description}</td>
+              </tr>
+              <tr>
+                <td>Facebook url</td>
+                <td>{data.facebook_url}</td>
+              </tr>
+              <tr>
+                <td>Reddit url</td>
+                <td>{data.reddit_url}</td>
+              </tr>
+              <tr>
+                <td>Telegram url</td>
+                <td>{data.telegram_url}</td>
+              </tr>
+            </tbody>
+          </Table>
+        </div>
+      </div>
     </>
   );
 };
