@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/CoinFish/1/static/css/main.c90eea6b.css",
-    "main.js": "/CoinFish/1/static/js/main.80f1134b.js",
-    "static/js/787.cc73118d.chunk.js": "/CoinFish/1/static/js/787.cc73118d.chunk.js",
-    "index.html": "/CoinFish/1/index.html",
-    "main.c90eea6b.css.map": "/CoinFish/1/static/css/main.c90eea6b.css.map",
-    "main.80f1134b.js.map": "/CoinFish/1/static/js/main.80f1134b.js.map",
-    "787.cc73118d.chunk.js.map": "/CoinFish/1/static/js/787.cc73118d.chunk.js.map"
+    "main.css": "/CoinFish/static/css/main.c90eea6b.css",
+    "main.js": "/CoinFish/static/js/main.b34cbc08.js",
+    "static/js/787.cc73118d.chunk.js": "/CoinFish/static/js/787.cc73118d.chunk.js",
+    "index.html": "/CoinFish/index.html",
+    "main.c90eea6b.css.map": "/CoinFish/static/css/main.c90eea6b.css.map",
+    "main.b34cbc08.js.map": "/CoinFish/static/js/main.b34cbc08.js.map",
+    "787.cc73118d.chunk.js.map": "/CoinFish/static/js/787.cc73118d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c90eea6b.css",
-    "static/js/main.80f1134b.js"
+    "static/js/main.b34cbc08.js"
   ]
 }
