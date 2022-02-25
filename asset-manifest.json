@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/CoinFish/static/css/main.c90eea6b.css",
-    "main.js": "/CoinFish/static/js/main.08c32c2a.js",
+    "main.js": "/CoinFish/static/js/main.90ee3568.js",
     "static/js/787.cc73118d.chunk.js": "/CoinFish/static/js/787.cc73118d.chunk.js",
     "index.html": "/CoinFish/index.html",
     "main.c90eea6b.css.map": "/CoinFish/static/css/main.c90eea6b.css.map",
-    "main.08c32c2a.js.map": "/CoinFish/static/js/main.08c32c2a.js.map",
+    "main.90ee3568.js.map": "/CoinFish/static/js/main.90ee3568.js.map",
     "787.cc73118d.chunk.js.map": "/CoinFish/static/js/787.cc73118d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c90eea6b.css",
-    "static/js/main.08c32c2a.js"
+    "static/js/main.90ee3568.js"
   ]
 }
