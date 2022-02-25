@@ -20,3 +20,9 @@ React styled using react-bootstrap.
 3. Exachanges - For the list of a particular page.
 4. Row - Single row in the page.
 5. DetailedRow - Details for each exchange.
+
+### Setup
+Run - npm start
+
+### Hosted URL
+https://divyakhetan.github.io/CoinFish/

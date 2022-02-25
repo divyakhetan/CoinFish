@@ -4,7 +4,11 @@ import Row from "./Row";
 const Exchanges = ({ exchanges, loading }) => {
   if (loading) {
     return (
-      <div class="spinner-border" role="status">
+      <div
+        class="spinner-border"
+        role="status"
+        style={{ marginLeft: "50%", marginTop: "20%", marginBottom: "5%" }}
+      >
         <span class="sr-only">Loading...</span>
       </div>
     );
