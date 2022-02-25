@@ -1,13 +1,15 @@
 import React from "react";
 import Home from "./Home";
+import DetailedRow from "../src/components/DetailedRow";
+
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/:pageNumber" element={<Home />} />
+        <Route path="/row/:id" element={<DetailedRow />} />
       </Routes>
     </BrowserRouter>
   );

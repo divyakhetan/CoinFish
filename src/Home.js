@@ -1,14 +1,18 @@
-import logo from "./logo.svg";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 import Exchanges from "../src/components/Exchanges";
 import Pagination from "../src/components/Pagination";
+import { useNavigate, useParams } from "react-router-dom";
 
 const App = () => {
+  const navigate = useNavigate();
+
   const [exchanges, setExchanges] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(
+    parseInt(useParams().pageNumber)
+  );
 
   useEffect(async () => {
     console.log("in here ", currentPage);
@@ -20,7 +24,6 @@ const App = () => {
     const res = await axios.get("https://api.coingecko.com/api/v3/exchanges", {
       params: params,
     });
-    console.log(res);
     setExchanges(res.data);
     setLoading(false);
   }, [currentPage]);
@@ -33,11 +36,14 @@ const App = () => {
         onLeftClick={() => {
           if (currentPage > 1) {
             setCurrentPage(currentPage - 1);
+            let page = currentPage - 1;
+            navigate(`/${page}`);
           }
         }}
         onRightClick={() => {
-          console.log("in right click");
           setCurrentPage(currentPage + 1);
+          let page = currentPage + 1;
+          navigate(`/${page}`);
         }}
       />
     </>
