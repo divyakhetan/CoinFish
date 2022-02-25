@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Table } from "react-bootstrap";
+import { Table, Button } from "react-bootstrap";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Image from "react-bootstrap/Image";
 
 const DetailedRow = () => {
   const navigate = useNavigate();
@@ -18,13 +19,25 @@ const DetailedRow = () => {
   }, []);
   return (
     <>
-      <button onClick={() => navigate(-1)}>go back</button>
+      <Button
+        onClick={() => navigate(-1)}
+        variant="danger"
+        style={{ margin: 20 }}
+      >
+        Go Back
+      </Button>
 
-      <Table striped bordered hover variant="dark">
+      <Table striped bordered hover variant="dark" className="centre">
         <tbody>
           <tr>
             <th>Field</th>
             <th>Value</th>
+          </tr>
+          <tr>
+            <td>Logo</td>
+            <td>
+              <Image src={data.image} rounded></Image>
+            </td>
           </tr>
           <tr>
             <td>Name</td>
@@ -38,10 +51,7 @@ const DetailedRow = () => {
             <td>Trust Rank</td>
             <td>{data.trust_score_rank}</td>
           </tr>
-          <tr>
-            <td>Logo</td>
-            <td>{data.image}</td>
-          </tr>
+
           <tr>
             <td>Year of establishment</td>
             <td>{data.year_established}</td>

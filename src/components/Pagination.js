@@ -1,26 +1,24 @@
 import React from "react";
+import { Button } from "react-bootstrap";
 
 const Pagination = ({ currentPage, onLeftClick, onRightClick }) => {
   return (
     <ul className="pagination">
-      <li className="page-item">
-        <button
-          type="button"
-          className="btn btn-outline-info"
-          onClick={onLeftClick}
-        >
+      <li className="page-item" style={{ marginRight: 20, marginLeft: "45%" }}>
+        <Button variant="outline-danger" onClick={onLeftClick}>
           Previous
-        </button>
+        </Button>
       </li>
-      {currentPage}
+      <li className="page-item" style={{ marginRight: 20 }}>
+        <Button variant="outline-info" disabled>
+          {currentPage}
+        </Button>
+      </li>
+
       <li className="page-item">
-        <button
-          type="button"
-          className="btn btn-outline-info"
-          onClick={onRightClick}
-        >
+        <Button variant="outline-success" onClick={onRightClick}>
           Next
-        </button>
+        </Button>
       </li>
     </ul>
   );

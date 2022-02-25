@@ -10,13 +10,13 @@ const Exchanges = ({ exchanges, loading }) => {
     );
   }
   return (
-    <Table striped bordered hover variant="dark">
+    <Table striped bordered hover variant="dark" className="centre">
       <tbody>
         <tr>
+          <th>Logo</th>
           <th>Name</th>
           <th>Country</th>
           <th>URL</th>
-          <th>Logo</th>
           <th>Trust Rank</th>
         </tr>
 
