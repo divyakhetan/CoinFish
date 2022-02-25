@@ -15,7 +15,9 @@ const Home = () => {
   );
 
   useEffect(async () => {
-    console.log("in here ", currentPage);
+    if (isNaN(currentPage)) {
+      setCurrentPage(1);
+    }
     setLoading(true);
     let params = {
       per_page: 10,
@@ -30,6 +32,7 @@ const Home = () => {
 
   return (
     <>
+      <h3>Exchanges data</h3>
       <Exchanges exchanges={exchanges} loading={loading} />
       <Pagination
         currentPage={currentPage}
