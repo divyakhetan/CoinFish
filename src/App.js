@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "./Home";
+import Home from "./components/Home";
 import DetailedRow from "../src/components/DetailedRow";
 
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";

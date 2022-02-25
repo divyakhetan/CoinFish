@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./App.css";
-import Exchanges from "../src/components/Exchanges";
-import Pagination from "../src/components/Pagination";
+import "../App.css";
+import Exchanges from "./Exchanges";
+import Pagination from "./Pagination";
 import { useNavigate, useParams } from "react-router-dom";
 
-const App = () => {
+const Home = () => {
   const navigate = useNavigate();
 
   const [exchanges, setExchanges] = useState([]);
@@ -49,4 +49,4 @@ const App = () => {
     </>
   );
 };
-export default App;
+export default Home;
