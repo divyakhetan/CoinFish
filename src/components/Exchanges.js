@@ -14,7 +14,7 @@ const Exchanges = ({ exchanges, loading }) => {
     );
   }
   return (
-    <Table striped bordered hover variant="dark" className="centre">
+    <Table striped bordered hover variant="dark" className="centre tableStyle">
       <tbody>
         <tr>
           <th>Logo</th>

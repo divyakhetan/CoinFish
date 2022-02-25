@@ -27,7 +27,13 @@ const DetailedRow = () => {
         Go Back
       </Button>
 
-      <Table striped bordered hover variant="dark" className="centre">
+      <Table
+        striped
+        bordered
+        hover
+        variant="dark"
+        className="centre  tableStyle"
+      >
         <tbody>
           <tr>
             <th>Field</th>

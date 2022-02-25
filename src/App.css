@@ -46,3 +46,13 @@
   height: 30px;
   width: 30px;
 }
+
+.tableStyle {
+  margin-left: 10%;
+  width: 80%;
+}
+
+h3 {
+  text-align: center;
+  margin: 1%;
+}
